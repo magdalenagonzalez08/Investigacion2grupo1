@@ -1,0 +1,155 @@
+/* ===== Variables ===== */
+:root {
+    --azul: #00b4ff;
+    --verde: #00ff9d;
+    --negro: #0a0a0a;
+    --texto: #e8f6ff;
+}
+
+/* ===== Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--texto);
+    background-color: var(--negro);
+    /* Manchas de color para que el efecto glass se note */
+    background-image:
+            radial-gradient(circle at 15% 20%, rgba(0, 180, 255, 0.35), transparent 40%),
+            radial-gradient(circle at 85% 80%, rgba(0, 255, 157, 0.30), transparent 40%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+/* ===== Efecto glass ===== */
+.glass {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Estructura ===== */
+.encabezado,
+.pie {
+    max-width: 900px;
+    margin: 0 auto 24px;
+    padding: 20px;
+    text-align: center;
+}
+
+.pie {
+    margin: 24px auto 0;
+    font-size: 0.9rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.tema {
+    padding: 20px;
+}
+
+h1 {
+    color: var(--verde);
+}
+
+h2 {
+    color: var(--azul);
+    margin-bottom: 16px;
+}
+
+h3 {
+    color: var(--verde);
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.ejemplo {
+    margin-bottom: 14px;
+    padding: 10px;
+    border-left: 3px solid var(--azul);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+}
+
+/* ===== TEMA 1: Texto y tipografía ===== */
+
+/* font-family: tipo de letra */
+.fuente-mono {
+    font-family: "Courier New", monospace;
+}
+
+/* font-size: tamaño | font-weight: grosor */
+.grande-negrita {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/* line-height: alto de línea | letter-spacing: espacio entre letras */
+.espaciado {
+    line-height: 1.8;
+    letter-spacing: 2px;
+}
+
+/* text-align: alineación | text-transform: mayúsculas/minúsculas */
+.centrado-mayus {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* text-shadow: sombra | text-decoration: subrayado */
+.sombra {
+    text-shadow: 0 0 8px var(--azul);
+    text-decoration: underline;
+    text-decoration-color: var(--verde);
+}
+
+/* ===== TEMA 2: Color y fondo ===== */
+
+/* color: color del texto */
+.texto-verde {
+    color: var(--verde);
+}
+
+/* background-color: color de fondo */
+.fondo-azul {
+    background-color: var(--azul);
+    color: var(--negro);
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* background-image: imagen o degradado de fondo */
+.fondo-degradado {
+    background-image: linear-gradient(90deg, var(--azul), var(--verde));
+    color: var(--negro);
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* background-size y background-repeat: tamaño y repetición */
+.fondo-patron {
+    background-image: radial-gradient(var(--verde) 2px, transparent 2px);
+    background-size: 16px 16px;
+    background-repeat: repeat;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* opacity: transparencia (0 a 1) */
+.opaco {
+    opacity: 0.4;
+}
