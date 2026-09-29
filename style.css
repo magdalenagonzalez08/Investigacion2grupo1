@@ -1,9 +1,10 @@
 /* ===== Variables ===== */
 :root {
-    --azul: #00b4ff;
-    --verde: #00ff9d;
-    --negro: #0a0a0a;
-    --texto: #e8f6ff;
+    --azul: rgb(0, 180, 255);
+    --verde: rgb(0, 255, 157);
+    --negro: rgb(10, 10, 10);
+    --texto: rgb(232, 246, 255);
+    --punto: radial-gradient(circle, rgb(0, 255, 157) 0 5px, transparent 6px);
 }
 
 /* ===== Base ===== */
@@ -39,7 +40,7 @@ body {
 /* ===== Estructura ===== */
 .encabezado,
 .pie {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto 24px;
     padding: 20px;
     text-align: center;
@@ -51,11 +52,11 @@ body {
 }
 
 main {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
     display: grid;
     gap: 24px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .tema {
@@ -85,71 +86,133 @@ h3 {
     border-radius: 8px;
 }
 
-/* ===== TEMA 1: Texto y tipografía ===== */
-
-/* font-family: tipo de letra */
-.fuente-mono {
-    font-family: "Courier New", monospace;
+.control {
+    display: block;
 }
 
-/* font-size: tamaño | font-weight: grosor */
-.grande-negrita {
-    font-size: 1.6rem;
-    font-weight: bold;
-}
+/* ===== BLOQUE 1: Texto ===== */
 
-/* line-height: alto de línea | letter-spacing: espacio entre letras */
-.espaciado {
-    line-height: 1.8;
-    letter-spacing: 2px;
-}
-
-/* text-align: alineación | text-transform: mayúsculas/minúsculas */
-.centrado-mayus {
+/* text-align: alineación del texto */
+.texto-centrado {
     text-align: center;
-    text-transform: uppercase;
 }
 
-/* text-shadow: sombra | text-decoration: subrayado */
-.sombra {
-    text-shadow: 0 0 8px var(--azul);
+/* text-decoration: subrayado, tachado o sin decoración */
+.texto-subrayado {
     text-decoration: underline;
     text-decoration-color: var(--verde);
 }
 
-/* ===== TEMA 2: Color y fondo ===== */
+/* text-shadow: sombra del texto (X, Y, desenfoque, color) */
+.texto-sombra {
+    text-shadow: 0 0 8px var(--azul);
+}
+
+/* text-transform: mayúsculas y minúsculas */
+.texto-mayusculas {
+    text-transform: uppercase;
+}
+
+/* letter-spacing: espacio entre letras */
+.texto-espaciado {
+    letter-spacing: 3px;
+}
+
+/* ===== BLOQUE 2: Tipografía ===== */
+
+/* font-family: lista de fuentes por prioridad */
+.fuente-mono {
+    font-family: "Courier New", monospace;
+}
+
+/* font-size: tamaño del texto */
+.fuente-grande {
+    font-size: 1.6rem;
+}
+
+/* font-weight: grosor de la fuente */
+.fuente-negrita {
+    font-weight: 700;
+}
+
+/* line-height: altura entre líneas */
+.fuente-interlineado {
+    line-height: 1.8;
+}
+
+/* font-style: estilo de la fuente */
+.fuente-cursiva {
+    font-style: italic;
+}
+
+/* ===== BLOQUE 3: Color ===== */
 
 /* color: color del texto */
-.texto-verde {
+.color-verde {
     color: var(--verde);
 }
 
-/* background-color: color de fondo */
-.fondo-azul {
+/* opacity: transparencia (0 a 1) */
+.color-opaco {
+    opacity: 0.4;
+}
+
+/* accent-color: color de acento de los controles */
+.color-acento {
+    accent-color: var(--verde);
+}
+
+/* caret-color: color del cursor de texto */
+.color-cursor {
+    caret-color: var(--verde);
+    background-color: var(--negro);
+    color: var(--texto);
+    border: 1px solid var(--azul);
+    border-radius: 6px;
+    padding: 4px 8px;
+}
+
+/* color-scheme: esquema claro u oscuro de los controles */
+.color-esquema {
+    color-scheme: dark;
+}
+
+/* ===== BLOQUE 4: Fondo ===== */
+.caja {
+    padding: 12px;
+    border-radius: 6px;
+    min-height: 56px;
+}
+
+/* background-color: color de fondo sólido */
+.fondo-color {
     background-color: var(--azul);
     color: var(--negro);
-    padding: 8px;
-    border-radius: 6px;
 }
 
 /* background-image: imagen o degradado de fondo */
-.fondo-degradado {
+.fondo-imagen {
     background-image: linear-gradient(90deg, var(--azul), var(--verde));
     color: var(--negro);
-    padding: 8px;
-    border-radius: 6px;
 }
 
-/* background-size y background-repeat: tamaño y repetición */
-.fondo-patron {
-    background-image: radial-gradient(var(--verde) 2px, transparent 2px);
-    background-size: 16px 16px;
-    background-repeat: repeat;
-    padding: 8px;
-    border-radius: 6px;
+/* background-size: medida de la imagen de fondo */
+.fondo-tamano {
+    background-image: var(--punto);
+    background-size: 24px 24px;
 }
 
-/* opacity: transparencia (0 a 1) */
-.opaco {
-    opacity: 0.4;
+/* background-repeat: repetición de la imagen (solo en horizontal) */
+.fondo-repeticion {
+    background-image: var(--punto);
+    background-size: 24px 24px;
+    background-repeat: repeat-x;
+}
+
+/* background-position: ubicación de la imagen dentro del fondo */
+.fondo-posicion {
+    background-image: var(--punto);
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: right 12px center;
 }
