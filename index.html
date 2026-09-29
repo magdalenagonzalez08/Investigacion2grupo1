@@ -11,14 +11,44 @@
 
 <header class="glass encabezado">
     <h1>Taller CSS3 · Equipo 1</h1>
-    <p>Texto y tipografía · Color y fondo</p>
+    <p>Texto · Tipografía · Color · Fondo</p>
 </header>
 
 <main>
 
 
     <section class="glass tema" aria-labelledby="titulo-texto">
-        <h2 id="titulo-texto">Texto y tipografía</h2>
+        <h2 id="titulo-texto">Texto</h2>
+
+        <article class="ejemplo">
+            <h3>text-align</h3>
+            <p class="texto-centrado">Este texto está centrado.</p>
+        </article>
+
+        <article class="ejemplo">
+            <h3>text-decoration</h3>
+            <p class="texto-subrayado">Este texto está subrayado.</p>
+        </article>
+
+        <article class="ejemplo">
+            <h3>text-shadow</h3>
+            <p class="texto-sombra">Este texto tiene sombra.</p>
+        </article>
+
+        <article class="ejemplo">
+            <h3>text-transform</h3>
+            <p class="texto-mayusculas">este texto está en mayúsculas</p>
+        </article>
+
+        <article class="ejemplo">
+            <h3>letter-spacing</h3>
+            <p class="texto-espaciado">Este texto tiene letras separadas.</p>
+        </article>
+    </section>
+
+
+    <section class="glass tema" aria-labelledby="titulo-tipografia">
+        <h2 id="titulo-tipografia">Tipografía</h2>
 
         <article class="ejemplo">
             <h3>font-family</h3>
@@ -26,53 +56,95 @@
         </article>
 
         <article class="ejemplo">
-            <h3>font-size y font-weight</h3>
-            <p class="grande-negrita">Texto grande y en negrita.</p>
+            <h3>font-size</h3>
+            <p class="fuente-grande">Este texto es grande.</p>
         </article>
 
         <article class="ejemplo">
-            <h3>line-height y letter-spacing</h3>
-            <p class="espaciado">Este párrafo tiene más espacio entre líneas y entre letras para que sea más fácil de leer.</p>
+            <h3>font-weight</h3>
+            <p class="fuente-negrita">Este texto está en negrita.</p>
         </article>
 
         <article class="ejemplo">
-            <h3>text-align y text-transform</h3>
-            <p class="centrado-mayus">texto centrado y en mayúsculas</p>
+            <h3>line-height</h3>
+            <p class="fuente-interlineado">Este párrafo tiene más espacio entre líneas para que se lea con más comodidad en pantalla.</p>
         </article>
 
         <article class="ejemplo">
-            <h3>text-shadow y text-decoration</h3>
-            <p class="sombra">Texto con sombra y subrayado.</p>
+            <h3>font-style</h3>
+            <p class="fuente-cursiva">Este texto está en cursiva.</p>
         </article>
     </section>
 
 
     <section class="glass tema" aria-labelledby="titulo-color">
-        <h2 id="titulo-color">Color y fondo</h2>
+        <h2 id="titulo-color">Color</h2>
 
         <article class="ejemplo">
             <h3>color</h3>
-            <p class="texto-verde">Texto con color verde.</p>
-        </article>
-
-        <article class="ejemplo">
-            <h3>background-color</h3>
-            <p class="fondo-azul">Párrafo con fondo azul sólido.</p>
-        </article>
-
-        <article class="ejemplo">
-            <h3>background-image (gradiente)</h3>
-            <p class="fondo-degradado">Fondo con degradado de azul a verde.</p>
-        </article>
-
-        <article class="ejemplo">
-            <h3>background-size y background-repeat</h3>
-            <p class="fondo-patron">Fondo con patrón de puntos repetido.</p>
+            <p class="color-verde">Este texto es verde.</p>
         </article>
 
         <article class="ejemplo">
             <h3>opacity</h3>
-            <p class="opaco">Este texto tiene opacidad reducida.</p>
+            <p class="color-opaco">Este texto tiene opacidad reducida.</p>
+        </article>
+
+        <article class="ejemplo">
+            <h3>accent-color</h3>
+            <label class="control">
+                <input type="checkbox" class="color-acento" checked>
+                Casilla con color de acento
+            </label>
+        </article>
+
+        <article class="ejemplo">
+            <h3>caret-color</h3>
+            <label class="control">
+                Escribe aquí:
+                <input type="text" class="color-cursor" value="Texto de prueba">
+            </label>
+        </article>
+
+        <article class="ejemplo">
+            <h3>color-scheme</h3>
+            <label class="control">
+                Lista con esquema oscuro:
+                <select class="color-esquema">
+                    <option>Opción 1</option>
+                    <option>Opción 2</option>
+                </select>
+            </label>
+        </article>
+    </section>
+
+    <!-- BLOQUE 4: FONDO -->
+    <section class="glass tema" aria-labelledby="titulo-fondo">
+        <h2 id="titulo-fondo">Fondo</h2>
+
+        <article class="ejemplo">
+            <h3>background-color</h3>
+            <p class="caja fondo-color">Fondo azul sólido.</p>
+        </article>
+
+        <article class="ejemplo">
+            <h3>background-image</h3>
+            <p class="caja fondo-imagen">Fondo con degradado de azul a verde.</p>
+        </article>
+
+        <article class="ejemplo">
+            <h3>background-size</h3>
+            <p class="caja fondo-tamano">Puntos de 24px.</p>
+        </article>
+
+        <article class="ejemplo">
+            <h3>background-repeat</h3>
+            <p class="caja fondo-repeticion">Puntos repetidos solo en horizontal.</p>
+        </article>
+
+        <article class="ejemplo">
+            <h3>background-position</h3>
+            <p class="caja fondo-posicion">Punto ubicado a la derecha.</p>
         </article>
     </section>
 
